@@ -78,8 +78,18 @@ public class JtQueue<T> implements Queueable<T> {
 			T[] temp = (T[]) new Object[myArr.length - 1];
 			this.setSize(temp.length);
 			retrieve = myArr[index];
-			for (int r = index; r < myArr.length - 1; r++) {
-				temp[r] = myArr[r + 1];
+			if(index != 0) {
+				for (int s = 0; s < myArr.length - 1; s++) {
+					if(s == index){
+						temp[s] = myArr[s + 1];
+					}else {
+						temp[s] = myArr[s];
+					}
+				}
+			}else {
+				for (int r = index; r < myArr.length - 1; r++) {
+					temp[r] = myArr[r + 1];
+				}
 			}
 			myArr = temp;
 		}

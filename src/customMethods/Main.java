@@ -13,7 +13,7 @@ public class Main {
 		
 		
 		
-		Student s = dd.remove(2);
+		Student s = dd.remove(3);
 	
 		int count =0;
 		for(int a = 0; a < dd.size(); a++) {
